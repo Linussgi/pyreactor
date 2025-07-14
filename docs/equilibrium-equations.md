@@ -1,6 +1,8 @@
-# General reaction (all components gas phase):
+# Equilibrium Equations
 
-$$aA + bB \;\leftrightarrow\; rR + sS$$
+## General gas phase reaction:
+
+$$aA + bB \leftrightarrow rR + sS$$
 
 - Find reaction conversion under any $T$ and $P$ conditions
 
@@ -9,7 +11,7 @@ $$aA + bB \;\leftrightarrow\; rR + sS$$
 
 ---
 
-### Equilibrium Constant
+## Equilibrium Constant
 
 Equilibrium constant equation:
 
@@ -45,12 +47,12 @@ $$\Delta G_T = \Delta H_T - T \Delta S_T$$
 $$K = \exp \left( \frac{-\Delta G_T}{RT} \right)$$
 
 - $K$ is dimensionless  
-- $K$ valid for temperature $T$ at $1\, \text{atm}$ due to standard ($\ominus$) enthalpy and entropy used to calculate adjusted values  
+- $K$ valid for temperature $T$ at $1 \text{atm}$ due to standard ($\ominus$) enthalpy and entropy used to calculate adjusted values  
 - Need to adjust for pressure $P$
 
 ---
 
-### Reaction Quotient
+## Reaction Quotient
 
 Notes:  
 - Reaction extent will be characterised by dimensionless quantity $\chi$  
@@ -95,14 +97,20 @@ Final step is to equate $Q$ to $K$ at equilibrium:
 
 $$Q - K = 0$$
 
-Solve this equation for $\chi$ to find reaction extent.
+Solve this equation for $\chi$ to find reaction extent. Only valid if $Q$ is also dimensionless.
 
-- Reaction quotient $Q$ currently has units of $P^{\Delta \gamma}$ but $K$ is dimensionless. Need to divide by pressure somewhere.  
-- Reaction Quotient doesn't yet take into account variations in pressure from standard pressure.
+### Pressure dependance
+
+Define $P$ as pressure ratio of reaction pressure to standard (atmospheric) pressure:
+$$
+P = \frac{P_{\text{reac}}}{P_{\text{atm}}}
+$$
+
+So $P^{\Delta \gamma}$ is dimensionless, allowing $Q$ to be dimensionless.
 
 ---
 
-### Generalised Form
+## Generalised Form
 
 Reaction quotient:
 
