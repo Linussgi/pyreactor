@@ -47,8 +47,7 @@ $$\Delta G_T = \Delta H_T - T \Delta S_T$$
 $$K = \exp \left( \frac{-\Delta G_T}{RT} \right)$$
 
 - $K$ is dimensionless  
-- $K$ valid for temperature $T$ at $1 \text{atm}$ due to standard ($\ominus$) enthalpy and entropy used to calculate adjusted values  
-- Need to adjust for pressure $P$
+- $K$ valid for temperature $T$
 
 ---
 
@@ -102,9 +101,8 @@ Solve this equation for $\chi$ to find reaction extent. Only valid if $Q$ is als
 ### Pressure dependance
 
 Define $P$ as pressure ratio of reaction pressure to standard (atmospheric) pressure:
-$$
-P = \frac{P_{\text{reac}}}{P_{\text{atm}}}
-$$
+
+$$P = \frac{P_{\text{reac}}}{P_{\text{atm}}}$$
 
 So $P^{\Delta \gamma}$ is dimensionless, allowing $Q$ to be dimensionless.
 

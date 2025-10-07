@@ -21,6 +21,10 @@ The conversion of a gas phase reaction is calculated via the following steps:
 - Equilibrium conversion $\chi$ of the reaction.
 - Optional pressure-temperature conversion heatmap (as `.svg`).
 
+Below is an example output graph for an idealised Haber process:
+
+![Haber Process reaction conversion graph](images/ammonia.png)
+
 ## Classes
 
 `pyreactor` defines two main classes to handle reactions, `Component` and `Reaction`.

@@ -115,6 +115,8 @@ class Reaction:
     def calculate_conversion(self, pressure: float, reac_init: list[float], prod_init: list[float], k_eq: float) -> float:
         """
         Solves for the equilibrium conversion (chi) that satisfies the reaction quotient = equilibrium constant.
+        Bounds `chi_min` and `chi_max` are imposed on the domain, which correspond to the maximum amount of 
+        components that are available for chemical reaction
 
         Args:
             pressure (float): Total system pressure.
@@ -129,8 +131,8 @@ class Reaction:
             RuntimeError: If the root-finding algorithm fails or if the residual does not bracket a root.
         """
         epsilon = 1e-5
-        chi_min = -max(n0 / comp.order for comp, n0 in zip(self.products, prod_init)) - epsilon
-        chi_max = min(n0 / comp.order for comp, n0 in zip(self.reactants, reac_init)) + epsilon
+        chi_min = -max(n0 / comp.order for comp, n0 in zip(self.products, prod_init)) + epsilon
+        chi_max = min(n0 / comp.order for comp, n0 in zip(self.reactants, reac_init)) - epsilon
 
         def residual(chi):
             try:
@@ -152,6 +154,3 @@ class Reaction:
             return sol.root
         else:
             raise RuntimeError("Root finding did not converge.")
-
-
-
